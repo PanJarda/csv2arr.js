@@ -11,7 +11,7 @@ miniature (550 B gzipped) csv parser
 
 	var res = csv2arr( csv );
 
-	// res = [ [ 1, 2, "Hello" ], [ 4, 5, 6 ] ]
+	// res = [ [ "1", "2", "Hello" ], [ "4", "5", "6" ] ]
 </script>
 ```
 
