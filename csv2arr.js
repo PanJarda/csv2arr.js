@@ -133,7 +133,7 @@
 	})();
 
 	if ( !noGlobal ) {
-		window.csv2arr = csv2arr
+		window.csv2arr = csv2arr;
 	}
 
 	return csv2arr;
