@@ -1,6 +1,6 @@
 # csv2arr.js
 
-miniature (550 B gzipped) csv parser
+miniature (550 B gzipped) CSV (RFC 4180) parser
 
 ## Usage
 
