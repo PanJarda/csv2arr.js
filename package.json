@@ -1,0 +1,15 @@
+{
+  "name": "parsercsv",
+  "version": "1.0.0",
+  "description": "miniature csv parser",
+  "main": "parsecsv.js",
+  "repository": "https://github.com/PanJarda/parsecsv.js",
+  "author": "Jarda Pernik <livingthinkingentity@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "terser": "^4.6.9"
+  },
+  "script": {
+    "build": "node terser.js"
+  }
+}

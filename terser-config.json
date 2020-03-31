@@ -1,0 +1,18 @@
+{
+	"entry": {
+		"parsecsv": "./parsecsv.js"
+	},
+	"output": {
+        "filename": "[name].min.js",
+        "path": "."
+	},
+	"options": {
+		"warnings": true,
+		"ie8": true,
+		"safari10": true,
+		"ecma": 5,
+		"compress": {
+			"ecma": 5
+		}
+	}
+}
