@@ -110,7 +110,7 @@
 					i:   0,
 					j:   0,
 					str: str,
-					res: res,
+					res: [],
 					row: []
 				},
 				state = "ROW",

@@ -1,6 +1,6 @@
 # parsecsv.js
 
-miniature csv parser
+miniature (552 B gzipped) csv parser
 
 ## Usage
 
