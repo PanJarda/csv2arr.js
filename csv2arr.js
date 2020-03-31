@@ -92,7 +92,7 @@
 			if ( this.i < 0 ) {
 				if ( window.console ) {
 					if ( window.console.warn ) {
-						console.warn( ERR_MISSING_QUOTE );
+						window.console.warn( ERR_MISSING_QUOTE );
 					} else {
 						window.console.log( ERR_MISSING_QUOTE );
 					}
