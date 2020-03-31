@@ -5,7 +5,7 @@ miniature (550 B gzipped) csv parser
 ## Usage
 
 ```html
-<script src="csv2arr.js"></script>
+<script src="csv2arr.min.js"></script>
 <script>
 	var csv = "1,2,\"Hello\"\n4,5,6";
 
