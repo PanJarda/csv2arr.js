@@ -1,6 +1,6 @@
 {
 	"entry": {
-		"parsecsv": "./parsecsv.js"
+		"csv2arr": "./csv2arr.js"
 	},
 	"output": {
         "filename": "[name].min.js",

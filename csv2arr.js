@@ -1,5 +1,5 @@
 /**
- * parsecsv.js
+ * csv2arr.js
  *
  * by: JP 2019
  * 
@@ -7,7 +7,7 @@
  * 
  * 
  * Example:
- *     var res = parsecsv("1,2,3\n4,5,6");
+ *     var res = csv2arr("1,2,3\n4,5,6");
  *     // res <-- [
  *     //             ['1', '2', '3'],
  *     //             ['4', '5', '6']
@@ -24,7 +24,7 @@
 
 	"use strict";
 
-	var parsecsv = ( function() {
+	var csv2arr = ( function() {
 		var ERR_MISSING_QUOTE = "Missing quote",
 		parstbl = {
 			ROW: {
@@ -101,7 +101,7 @@
 			}
 		}
 		
-		function parsecsv( str ) {
+		function csv2arr( str ) {
 			var action,
 				c,
 				o = {
@@ -129,12 +129,12 @@
 			return o.res;
 		};
 		
-		return parsecsv;
+		return csv2arr;
 	})();
 
 	if ( !noGlobal ) {
-		window.parsecsv = parsecsv
+		window.csv2arr = csv2arr
 	}
 
-	return parsecsv;
+	return csv2arr;
 });
