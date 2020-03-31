@@ -9,7 +9,7 @@
   "devDependencies": {
     "terser": "^4.6.9"
   },
-  "script": {
+  "scripts": {
     "build": "node terser.js"
   }
 }
