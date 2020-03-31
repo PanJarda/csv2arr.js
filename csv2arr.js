@@ -21,7 +21,7 @@
 
 	"use strict";
 
-	var csv2arr = ( function() {
+	var csv2arr = ( function( window ) {
 		var ERR_MISSING_QUOTE = "Missing quote",
 		parstbl = {
 			ROW: {
@@ -127,7 +127,7 @@
 		};
 		
 		return csv2arr;
-	})();
+	})( window );
 
 	if ( !noGlobal ) {
 		window.csv2arr = csv2arr;
