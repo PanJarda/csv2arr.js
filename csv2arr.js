@@ -8,10 +8,7 @@
  * 
  * Example:
  *     var res = csv2arr("1,2,\"Hello\"\n4,5,6");
- *     // res <-- [
- *     //             ['1', '2', 'Hello'],
- *     //             ['4', '5', '6']
- *     //         ]
+ *     // res <-- [ [ '1', '2', 'Hello' ], [ '4', '5', '6' ] ]
  */
 ( function( global, factory ) {
 	"use strict";
@@ -28,37 +25,37 @@
 		var ERR_MISSING_QUOTE = "Missing quote",
 		parstbl = {
 			ROW: {
-				'"':     ['QOT', startqot],
-				',':     ['ROW', pushcol],
-				'\r':    ['CR',  pushrow],
-				default: ['COL', startcol]
+				'"':     [ "QOT", startqot ],
+				',':     [ "ROW", pushcol ],
+				'\r':    [ "CR",  pushrow ],
+				default: [ "COL", startcol ]
 			},
 			COL: {
-				',':     ['ROW', pushcol],
-				'\n':    ['ROW', pushrow],
-				'\r':    ['CR',  pushrow],
-				default: ['COL', skipchar]
+				',':     [ "ROW", pushcol ],
+				'\n':    [ "ROW", pushrow ],
+				'\r':    [ "CR",  pushrow ],
+				default: [ "COL", skipchar ]
 			},
 			QOT: {
-				'"':     ['ESC', pushesc],
-				default: ['QOT', skipchar]
+				'"':     [ "ESC", pushesc ],
+				default: [ "QOT", skipchar ]
 			},
 			ESC: {
-				'"':     ['QOT', startqot],
-				'\n':    ['ROW', pushrow],
-				'\r':    ['CR',  pushrow],
-				',':     ['ROW', pushcol],
-				default: ['COL', startcol]
+				'"':     [ "QOT", startqot ],
+				'\n':    [ "ROW", pushrow ],
+				'\r':    [ "CR",  pushrow ],
+				',':     [ "ROW", pushcol ],
+				default: [ "COL", startcol ]
 			},
 			CR: {
-				'\n':    ['ROW', skipchar],
-				'\r':    ['CR',  pushrow],
-				',':     ['ROW', pushcol],
-				'"':     ['QOT', startqot],
-				default: ['COL', startcol]
+				'\n':    [ "ROW", skipchar ],
+				'\r':    [ "CR",  pushrow ],
+				',':     [ "ROW", pushcol ],
+				'"':     [ "QOT", startqot ],
+				default: [ "COL", startcol ]
 			},
 			END: {
-				default: ['',    pushrow]
+				default: [ '',    pushrow ]
 			}
 		};
 	
